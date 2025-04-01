@@ -19,7 +19,14 @@ const Join = () => {
         </div>
 
         {/* Форма для быстрого контакта */}
-        <form name="quick-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" className="mt-10">
+        <form 
+          name="quick-contact" 
+          method="POST" 
+          action="/success" 
+          data-netlify="true" 
+          netlify-honeypot="bot-field" 
+          className="mt-10"
+        >
           <input type="hidden" name="form-name" value="quick-contact" />
           <div className="hidden">
             <label>
@@ -36,6 +43,7 @@ const Join = () => {
                 placeholder="Ваше имя"
                 autoComplete="off"
                 required
+                aria-label="Ваше имя"
               />
             </div>
             <div className="w-full sm:w-auto">
@@ -46,12 +54,14 @@ const Join = () => {
                 placeholder="Ваш email"
                 autoComplete="off"
                 required
+                aria-label="Ваш email"
               />
             </div>
             <div className="sm:mr-3">
               <button
                 type="submit"
                 className="w-full sm:w-auto text-xl text-white font-semibold text-center rounded-xl sm:rounded-full bg-primary py-5 px-12 hover:bg-darkmode duration-300"
+                aria-label="Отправить форму"
               >
                 Отправить
               </button>
@@ -63,7 +73,13 @@ const Join = () => {
         <div className="mt-16 bg-white dark:bg-darkmode shadow-lg rounded-xl p-8">
           <h3 className="text-2xl font-bold mb-6 text-center">Расскажите о вашей задаче подробнее</h3>
           
-          <form name="detailed-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <form 
+            name="detailed-contact" 
+            method="POST" 
+            action="/success" 
+            data-netlify="true" 
+            netlify-honeypot="bot-field"
+          >
             <input type="hidden" name="form-name" value="detailed-contact" />
             <div className="hidden">
               <label>
@@ -81,6 +97,7 @@ const Join = () => {
                   className="w-full py-3 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="Иван Иванов"
                   required
+                  aria-label="Ваше полное имя"
                 />
               </div>
               <div>
@@ -91,6 +108,7 @@ const Join = () => {
                   name="company"
                   className="w-full py-3 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="ООО Производство"
+                  aria-label="Название компании"
                 />
               </div>
             </div>
@@ -105,6 +123,7 @@ const Join = () => {
                   className="w-full py-3 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="mail@example.com"
                   required
+                  aria-label="Ваш email"
                 />
               </div>
               <div>
@@ -115,6 +134,7 @@ const Join = () => {
                   name="phone"
                   className="w-full py-3 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="+7 (___) ___-__-__"
+                  aria-label="Ваш телефон"
                 />
               </div>
             </div>
@@ -128,6 +148,7 @@ const Join = () => {
                 className="w-full py-3 px-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                 placeholder="Расскажите о вашем производстве и какие задачи вы хотите решить"
                 required
+                aria-label="Описание вашей задачи"
               ></textarea>
             </div>
             
@@ -135,6 +156,7 @@ const Join = () => {
               <button
                 type="submit"
                 className="py-4 px-12 bg-primary text-white font-bold rounded-full hover:bg-darkmode transition duration-300"
+                aria-label="Отправить заявку"
               >
                 Отправить заявку
               </button>
